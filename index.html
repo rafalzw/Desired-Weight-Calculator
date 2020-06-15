@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desired Weight Calculator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="heading">Desired Weight Calculator</h1>
+    </header>
+    <main class="content">
+        <section class="form">
+            <article class="form__item">
+                <label for="initial-weight" class="form__label">Initial weight:</label>
+                <div class="form__value">
+                    <input type="range" class="form__input" id="initial-weight" step="1" min="30" max="130">
+                    <p class="form__result" data-initial-weight-result>80 kg</p>
+                </div>
+            </article>
+            <article class="form__item">
+                <label for="desired-weight" class="form__label">Desired weight:</label>
+                <div class="form__value">
+                    <input type="range" class="form__input" id="desired-weight" data-desired-weight step="1" min="30"
+                        max="130">
+                    <p class="form__result" data-desired-weight-result>80 kg</p>
+                </div>
+            </article>
+            <article class="form__item">
+                <label for="height" class="form__label">Height:</label>
+                <div class="form__value">
+                    <input type="range" class="form__input" id="height" data-height step="1" min="120" max="220">
+                    <p class="form__result" data-height-result>170 cm</p>
+                </div>
+            </article>
+            <article class="form__item">
+                <label for="start-date" class="form__label">Start date:</label>
+                <div class="form__value">
+                    <input type="date" class="form__input" id="start-date" value="2020-06-10" min="2020-06-10">
+                </div>
+            </article>
+            <article class="form__item">
+                <label for="end-date" class="form__label">End date:</label>
+                <div class="form__value">
+                    <input type="date" class="form__input" id="end-date" value="2020-06-10" min="2020-06-10">
+
+                </div>
+            </article>
+            <button class="form__button" data-start-btn>Count</button>
+        </section>
+        <section class="result" data-result>
+        </section>
+    </main>
+    <script src="js/index.js"></script>
+    <script>
+        const weight = new Weight();
+        weight.initializeApp();
+    </script>
+</body>
+
+</html>
